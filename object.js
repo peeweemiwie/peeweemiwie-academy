@@ -37,11 +37,14 @@ var politicians = {
     gov_of_california: 'jerry brown'
 };
 
-  var reverse_politician_lookup = {};
-  for(var key in politicians){
-    reverse_politician_lookup[politicians[key]] = key;
-  }
-  console.log(reverse_politician_lookup);
+var reverse_politician_lookup = {};
+for(var key in politicians){
+  reverse_politician_lookup[politicians[key]] = key;
+}
+console.log(reverse_politician_lookup);
+
+
+/////////////////////////////////////////////////////
 
 
 var complex_object = {
