@@ -1,6 +1,5 @@
 ### closure
 
-
     function wrapValue(n) {
       var localVariable = n;
       return function() { return localVariable; };
@@ -100,5 +99,46 @@ In JavaScript strict mode, the first argument becomes the value of this in the i
     console.log(myObject); 
 
 
+=======================================
 
+### Array.prototype.forEach()
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+
+The `forEach()` method executes a provided function once per array element.
+
+    arr.forEach(callback[, thisArg])
+
+Parameters:
+
+`callback`
+
+Function to execute for each element, taking three arguments:
+
+`currentValue`
+
+The current element being processed in the array.
+
+`index`
+
+The index of the current element being processed in the array.
+
+`array`
+
+The array that `forEach()` is being applied to.
+
+`thisArg`
+
+Optional. Value to use as this when executing callback.
+
+
+
+
+    function logArrayElements(ingredients, i) {
+      console.log(i + ") " +ingredients[0] + ": " + ingredients[1] + "g");
+    }
+
+    var ingredients = [["strawberries", 70], ["mango", 10], ["banana", 30], ["blueberries", 23]];
+
+    ingredients.forEach(logArrayElements);
 
