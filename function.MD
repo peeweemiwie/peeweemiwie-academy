@@ -111,25 +111,15 @@ The `forEach()` method executes a provided function once per array element.
 
 Parameters:
 
-`callback`
+*   **callback** Function to execute for each element, taking three arguments:
 
-Function to execute for each element, taking three arguments:
+*   **currentValue** The current element being processed in the array.
 
-`currentValue`
+*   **index** The index of the current element being processed in the array.
 
-The current element being processed in the array.
+*   **array** The array that `forEach()` is being applied to.
 
-`index`
-
-The index of the current element being processed in the array.
-
-`array`
-
-The array that `forEach()` is being applied to.
-
-`thisArg`
-
-Optional. Value to use as this when executing callback.
+*   **thisArg** Optional. Value to use as this when executing callback.
 
 
 
