@@ -121,8 +121,7 @@ Parameters:
 
 *   **thisArg** Optional. Value to use as this when executing callback.
 
-
-
+---------------------------------------
 
     function logArrayElements(ingredients, i) {
       console.log(i + ") " +ingredients[0] + ": " + ingredients[1] + "g");
@@ -130,5 +129,5 @@ Parameters:
 
     var ingredients = [["strawberries", 70], ["mango", 10], ["banana", 30], ["blueberries", 23]];
 
-    ingredients.forEach(logArrayElements);
+    ingredients.forEach(logArrayElements    
 
