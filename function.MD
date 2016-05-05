@@ -54,3 +54,51 @@
     }
 
     console.log(findSolution(24));
+
+
+=======================================
+
+
+### Invoking a Function with a Function Constructor
+
+    function constructName(arg1, arg2) {
+      this.firstName = arg1;
+      this.lastName  = arg2;
+      this.fullName = arg1 + " " + arg2;
+    }
+
+    var x = new constructName("Miwa","Yagi")
+    console.log(x.fullName); 
+
+
+### Invoking a Function with a Function Method
+
+Both methods take an owner object as the first argument. The only difference is that call() takes the function arguments separately, and apply() takes the function arguments in an array.
+
+In JavaScript strict mode, the first argument becomes the value of this in the invoked function, even if the argument is not an object.
+
+
+---------------------------------------
+
+#### call
+
+    var myObject;
+    function myFunction(a, b) {
+        return a * b;
+    }
+    myObject = myFunction.call(myObject, 10, 2); 
+
+
+#### apply    
+
+    var myObject, myArray;
+    function myFunction(a, b) {
+        return a * b;
+    }
+    myArray = [3, 2];
+    myObject = myFunction.apply(myObject, myArray);  
+    console.log(myObject); 
+
+
+
+
