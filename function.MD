@@ -131,3 +131,56 @@ Parameters:
 
     ingredients.forEach(logArrayElements    
 
+
+=======================================
+
+### Array.prototype.map()
+
+*   The map() method creates a new array with the results of calling a function for every array element.
+
+*   The map() method calls the provided function once for each element in an array, in order.
+
+*   Note: map() does not execute the function for array elements without values.
+
+*   Note: map() does not change the original array.
+
+
+---------------------------------------
+
+    var kvArray = [{key:1, value:10}, {key:2, value:20}, {key:3, value: 30}];
+    var reformattedArray = kvArray.map(function(obj){ 
+      var rObj = {};
+      rObj[obj.key] = obj.value;
+      return rObj;
+    });
+
+    reformattedArray;
+
+---------------------------------------
+
+    var numbers = [1, 4, 9];
+    var roots = numbers.map(Math.sqrt);
+    console.log(roots);
+
+    var numbers = [1, 4, 9];
+    var doubles = numbers.map(function(num) {
+      return num * 2;
+    });
+    console.log(doubles);
+
+---------------------------------------
+
+    var persons = [
+      {firstname : "Malcom", lastname: "Reynolds", prefix: "Mr."},
+      {firstname : "John", lastname: "Frye", prefix: "Mr."},
+      {firstname : "Jane", lastname: "Cobb", prefix: "Ms."}
+    ],
+    newArray = [],
+    getFullName = function(item) {
+      var fullname = "Howdy! " + [item.prefix, item.firstname, item.lastname].join(" ");
+      return fullname;
+    };
+
+    newArray = persons.map(getFullName);
+
+    console.log(newArray);
