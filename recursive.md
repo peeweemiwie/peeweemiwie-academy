@@ -67,8 +67,7 @@ https://www.codecademy.com/en/courses/javascript-lesson-205/3/3#
     }
 
     function multiplyEach() {
-      // Remove the last value of the stack 
-      // and assign it to the variable int
+      // Remove the last value of the stack and assign it to the variable int
       int = stack.pop();
       x = stack.length;
       // Base case
@@ -77,8 +76,8 @@ https://www.codecademy.com/en/courses/javascript-lesson-205/3/3#
       }
       // Recursive case
       else {
-      stack[x - 1] = int * stack[x - 1];
-      return multiplyEach();
+        stack[x - 1] = int * stack[x - 1];
+        return multiplyEach();
       }
     }
 

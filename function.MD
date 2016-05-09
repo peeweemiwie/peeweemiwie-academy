@@ -98,7 +98,7 @@ Parameters:
 
     var ingredients = [["strawberries", 70], ["mango", 10], ["banana", 30], ["blueberries", 23]];
 
-    ingredients.forEach(logArrayElements    
+    ingredients.forEach(logArrayElements);    
 
 
 =======================================
