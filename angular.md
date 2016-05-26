@@ -9,6 +9,8 @@ Angular expressions are JavaScript-like code snippets that are mainly placed in 
 
 ###What is a Module?
 
+https://docs.angularjs.org/guide/module
+
 You can think of a module as a container for the different parts of your app – controllers, services, filters, directives, etc.
 
 
