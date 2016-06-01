@@ -64,6 +64,19 @@ We made a new directive. We used app.directive to create a new directive named '
 3.   `templateUrl` specifies the HTML to use in order to display the data in `scope.info`. Here we use the HTML in js/directives/appInfo.html.
 
 
+#####The restrict option is typically set to:
+
+- 'A' - only matches attribute name
+- 'E' - only matches element name
+- 'C' - only matches class name
+- 'M' - only matches comment
+
+#####These restrictions can all be combined as needed:
+
+- 'AEC' - matches either attribute or element or class name
+
+
+
 ###Understanding Controllers
 
 https://docs.angularjs.org/guide/controller
