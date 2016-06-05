@@ -4,7 +4,6 @@ var browserSync = require('browser-sync').create();
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
-var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
@@ -37,19 +36,6 @@ gulp.task('browserSync', function(){
   });
 });
 
-// gulp.task('useref', function(){
-//   return gulp.src('app/*.html')
-//     .pipe(useref())
-//     .pipe(gulp.dest('dist'))
-// });
-
-// gulp.task('useref', function(){
-//   return gulp.src('app/*.html')
-//     .pipe(useref())
-//     .pipe(gulpIf('*.js', uglify()))
-//     .pipe(gulp.dest('dist'))
-// });
-
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
@@ -57,14 +43,6 @@ gulp.task('useref', function(){
     .pipe(gulpIf('*.css', cleanCSS()))
     .pipe(gulp.dest('dist'))
 });
-
-// gulp.task('images', function(){
-//   return gulp.src('app/images/**/*.+(png|jpg|jpeg|svg)')
-//     .pipe(imagemin({
-//       interlaced: true
-//     }))
-//     .pipe(gulp.dest('dist/images'))
-// });
 
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
