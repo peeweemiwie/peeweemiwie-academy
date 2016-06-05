@@ -1,0 +1,26 @@
+$black: #000;
+
+.testing {
+  width: percentage(5/7);
+  color:  rgba($black, .125);
+}
+
+body{
+  background: rgba(red, .1)
+}
+
+figure img {
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+
+
+.test {
+  height: 100px;
+  width: 100px;
+  background-color: pink;
+    opacity: .5;
+    box-sizing: border-box;
+    transform: scale(.5);
+    display: flex;
+}

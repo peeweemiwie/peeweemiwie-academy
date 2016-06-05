@@ -1,7 +1,7 @@
 {
-  "name": "test",
+  "name": "test-gulp",
   "version": "1.0.0",
-  "description": "",
+  "description": "test gulp",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,19 +9,18 @@
   "author": "Miwa",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.12.8",
+    "browser-sync": "^2.12.12",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.4.5",
+    "gulp-clean-css": "^2.0.9",
     "gulp-cssnano": "^2.1.2",
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.1",
-    "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.1",
-    "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "gulp-useref": "^3.1.0",
-    "run-sequence": "^1.2.0"
+    "run-sequence": "^1.2.1"
   }
 }
