@@ -1,0 +1,59 @@
+  .main-nav-list a{
+    align-items: center;
+    background-color: $bg-color-1;
+    border: 1px solid rgba($red, .9);
+    color: $white;
+    display: inline-flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    height: calc(100vh / 2 - 3.5rem);
+    justify-content: center;
+    position: fixed;
+    text-decoration: none;
+    text-shadow: 0 0 0 transparent;
+    transition: color .5s, font-size .5s, text-shadow .5s, left .5s;
+    width: calc(100vw / 2);
+    z-index: 30; 
+    animation: color-transition 6s linear infinite;
+  }
+  
+  .main-nav-list a:focus,
+  .main-nav-list a:hover {
+    color: $white;
+    font-size: 5.5rem;
+    text-shadow: 5px 5px 10px #000;
+    transition: all .5s;
+  }
+
+  .main-nav-list li:nth-of-type(1) a, 
+  .main-nav-list li:nth-of-type(2) a {
+    border-bottom: 0;
+    top: $header-height;
+  }
+
+  .main-nav-list li:nth-of-type(3) a,
+  .main-nav-list li:nth-of-type(4) a {
+    top: calc(100vh / 2 + 3.5rem); 
+  }
+
+  .main-nav-list li:nth-of-type(1) a,
+  .main-nav-list li:nth-of-type(3) a {
+    left: 0;
+  }
+
+  .main-nav-list li:nth-of-type(2) a, 
+  .main-nav-list li:nth-of-type(4) a {
+    border-left: 0;
+    left: 50%;
+  }
+
+  .nav-hide .main-nav-list li:nth-of-type(odd) a {
+    left: -50%;
+  }
+
+  .nav-hide .main-nav-list li:nth-of-type(even) a {
+    left: 100%;
+  }
+
+

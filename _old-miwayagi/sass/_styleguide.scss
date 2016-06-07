@@ -1,0 +1,68 @@
+.styleguide .container > *:not(.section-title) {
+  margin-left: 2rem;
+}
+.swatch {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-left-width: 20px;
+  color: $text;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+// font-family: 'Noto Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Imprima', sans-serif;
+// font-family: 'Orienta', sans-serif;
+// font-family: 'Hind Vadodara', sans-serif;
+// font-family: 'Tenali Ramakrishna', sans-serif;
+// font-family: 'Roboto', sans-serif;
+//noto poppins imprima orienta hind tenali roboto
+
+
+
+.fonts p {
+  font-size: 3rem;
+}
+
+.fonts span {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  text-align: right;
+  width: 7rem;  
+}
+
+.noto {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+.poppins {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.imprima {
+  font-family: 'Imprima', sans-serif !important;
+}
+
+.orienta {
+  font-family: 'Orienta', sans-serif !important;
+}
+
+.hind {
+  font-family: 'Hind Vadodara', sans-serif !important;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.arial {
+  font-family: arial, sans-serif !important;
+}
+
+.helvetica-neue {
+  font-family: 'helvetica neue', sans-serif !important;
+}

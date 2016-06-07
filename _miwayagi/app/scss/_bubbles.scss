@@ -1,0 +1,112 @@
+
+.bubble-wrapper {
+  background-color: #2F4F4F;
+  border: 1px solid gray;
+  border-radius: 20px;
+  height: calc(100vh - 34rem);
+  margin-left: 5%;
+  overflow: hidden;
+  perspective: 800px;
+  // position: absolute;
+  transform-style: preserve-3d;
+  width: 90%;
+  animation: bgColor 10s infinite;
+}
+
+.bubble-wrapper span {
+  align-items: center;
+  background-color: rgba(230, 230, 230, .5);
+  border-radius: 100%;
+  color: #bbb;
+  display: inline-flex;
+  justify-content: center;
+  margin: 2rem;    
+}
+
+.bubble-wrapper span:nth-of-type(4n+1) {
+  animation: bubblesUp 18s infinite;
+}
+
+.bubble-wrapper span:nth-of-type(4n+2) {
+  animation: bubblesDown 18s infinite 2s;
+}
+
+.bubble-wrapper span:nth-of-type(4n+3) {
+  animation: bubblesRight 18s infinite 4s;
+}
+
+.bubble-wrapper span:nth-of-type(4n+4) {
+  animation: bubblesLeft 18s infinite 6s;
+}
+
+@keyframes bgColor {
+  0% {
+    background-color: #2F4F4F;
+  }
+  33% {
+    background-color: lightslategray;
+  }
+  66% {
+    backgournd-color: #efefef;
+  }
+}
+
+@keyframes bubblesUp {
+  0% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale3D(3, 3, 3) translateY(-20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}
+
+@keyframes bubblesDown {
+  0% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale3D(3, 3, 3) translateY(20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}
+
+@keyframes bubblesRight {
+  0% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale3D(5, 5, 5) translateX(20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}
+
+@keyframes bubblesLeft {
+  0% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale3D(5, 5, 5) translateX(-20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3D(1, 1, 1);
+  }
+}

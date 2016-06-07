@@ -1,0 +1,61 @@
+.image-container {      
+  margin: 0 auto;
+  width: 100%;    
+}
+
+.image-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.image-container > div {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 1px solid $gray-a;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  float: left;
+  height: 300px;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  transition: border-color .3s, border-radius .3s;
+  width: 45%;     
+}
+
+.image-container > div:focus,
+.image-container > div:hover {
+  border-color: rgba(20,20,20,.4);
+  border-radius: 30px;
+  transition: border-color .3s, border-radius .3s;
+}
+
+
+.image-container > div p {
+  background-color: rgba(20,20,20,.8);
+  border-radius: 30px;
+  color: #FFF;   
+  font-family: arial, sans-serif;
+  font-size: 24px;
+  opacity: 0;
+  padding: 40px 20px;
+  position: relative;
+  text-align: center;
+  transform: scale(0,0);
+  transition: opacity .3s, transform .3s, z-index .3s;
+  width: 100%;  
+  z-index: 0;
+}
+
+.image-container > div:focus p,
+.image-container > div:hover p {
+  opacity: 1;
+  transform: scale(1,1);
+  transition: opacity .3s, transform .3s, z-index .3s;
+  z-index: 10;
+}

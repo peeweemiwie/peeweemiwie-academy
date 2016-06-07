@@ -1,0 +1,188 @@
+@media (min-width: 993px) { 
+
+  .experience .work:nth-of-type(2) .title{
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) { 
+
+  .page > h2 {
+    font-size: 8rem;
+    padding: 1rem;
+  }
+
+  .col {
+    float: none;
+    margin: 0 10% 8rem;
+    width: 80%;
+  }
+
+  .photo-frame {
+    padding: 1rem;
+  }
+  
+  // .contact > .col {
+  //   margin: 0;
+  // }
+
+  .contact {
+    height: auto;
+  }
+
+  .contact > .col {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    left: auto;
+    padding: 4rem;
+    position: static;
+    text-align: center;
+    top: auto;
+    transform: none;
+    z-index: 5;
+}
+
+  .bubble-wrapper {
+    // width: 80%;
+  }
+
+  // .main-nav-list {
+  //   flex-wrap: wrap;
+  // }
+
+  // .main-nav-list li {
+  //   text-align: center;
+  //   width: calc(50% - 4rem);
+  // }
+
+}
+
+@media (max-width: 767px) { 
+  header[role=banner] {
+    background-color: gray;
+    text-align: left;
+  }
+
+  header[role=banner] .job-title {
+    display: none;
+  }
+
+  button.menu {
+    left: 100vw;
+  }
+
+  button.menu .material-icons {
+    color: #F00;
+    font-size: 4rem;
+    margin-top: 0.5rem;
+  }
+
+  .page-wrapper {
+    overflow: hidden;
+    width: 100vw;
+  }
+
+  .page {
+    min-height: calc(100vh - 7rem);
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .col {
+    float: none;
+    margin: 0 1%;
+    width: 96%;
+  } 
+
+  .experience .section-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .experience .section-title .time{
+    display: flex;
+    align-items: center;
+  }
+
+  .experience .section-title h4 {
+    display: block;
+    padding-top: .5rem;
+  }
+
+  .experience .section-title .company {
+    display: inline;
+  }
+
+  .experience .section-title .time.start {
+    float: right;
+  }
+
+  .experience .section-title .time.end {
+      float: left;
+  }
+
+  .photo-frame {
+    padding: 1rem;
+  }
+
+  .bubble-wrapper {
+    display: none;
+  }
+
+  .page > h2 {
+    font-size: 5rem;
+  }
+
+  .photo-frame,
+  .image-container > div {
+    width: 96%;
+  }
+
+// nav
+
+  .main-nav-list a{
+    align-items: center;
+    background-color: $bg-color-1;
+    color: $white;
+    display: inline-flex;
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    height: calc((100vh - 7rem) / 4 );
+    justify-content: flex-start;
+    left: 0;
+    padding-left: 2rem;
+    position: fixed;
+    text-decoration: none;
+    text-shadow: 0 0 0 transparent;
+    transition: left .5s;
+    width: 100vw;
+    z-index: 30; 
+  }
+
+  .main-nav-list a:focus, 
+  .main-nav-list a:hover {
+    color: #fff;
+    font-size: 5rem;
+    text-shadow: none;
+  }
+
+  .nav-hide .main-nav-list li:nth-of-type(odd) a {
+    left: -100vw;
+  }
+
+  .nav-hide .main-nav-list li:nth-of-type(even) a {
+    left: 100vw;
+  }
+
+  @for $i from 1 through 4 {
+    .main-nav-list li:nth-of-type(#{$i}) a {
+      border-bottom: 1px solid rgba($red, .9);
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      left: 0;
+      top: calc(((100vh - 7rem) / 4) * (#{$i} - 1) + 7rem);
+    }
+  }
+}

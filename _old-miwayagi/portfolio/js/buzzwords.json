@@ -1,0 +1,65 @@
+{
+ "name": "buzzwords",
+ "children": [
+  {
+   "name": "analytics",
+   "children": [
+    {
+     "name": "data visualization",
+     "children": [
+      {"name": "Data Visualization", "size": 60000},
+      {"name": "Big Data", "size": 30000},
+      {"name": "Data Science", "size": 20000}
+     ]
+    },
+    {
+     "name": "js",
+     "children": [
+      {"name": "D3.js", "size": 30000},
+      {"name": "angular.js", "size": 20000},
+      {"name": "node.js", "size": 20000},
+      {"name": "ES6", "size": 10000}
+     ]
+    },
+    {
+      "name": "misc",
+      "children": [
+        {"name": "Sass", "size": 10000},
+        {"name": "data base", "size": 10000},
+        {"name": "mongoDB", "size": 10000},
+        {"name": "web architecture", "size": 20000}
+      ]
+    },
+    {
+      "name": "data science",
+      "children": [
+        {"name": "machine learning", "size": 15000},
+        {"name": "algorithms", "size": 15000},
+        {"name": "data mining", "size": 9000},
+        {"name": "data analysis", "size": 9000},
+        {"name": "real-time data visualization", "size": 15000},
+        {"name": "medical informatics", "size": 20000}
+      ]
+    },
+    {
+      "name": "design",
+      "children": [
+        {"name": "User Experience", "size": 20000},
+        {"name": "User Interface", "size": 10000},
+        {"name": "SVG animation", "size": 10000}
+      ]
+    },
+    {
+      "name": "tools",
+      "children": [
+        {"name": "visual.ly", "size": 15000},
+        {"name": "Processing", "size": 22000},
+        {"name": "tableau", "size": 15000},
+        {"name": "google publicdata", "size": 10000},
+        {"name": "wordle.net", "size": 10000}
+      ]
+    }
+   ]
+  }
+]
+}
