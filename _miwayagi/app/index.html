@@ -3,20 +3,197 @@
 <head>
   <meta charset="UTF-8">
   <title>Miwa Yagi 😺 Design Technologist</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <!--<script src="js/vender/angular.min.js"></script>  if no internet connection -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-app='portfolio'>
-  <main ng-controller='linksController'>
-    <header>
-      <header-title title="title"></header-title>
-    </header>
+<body ng-app='portfolio' data-nav='show'>
 
-  </main>
+  <header role="banner">
+    <a href="#home" class="headers">
+      <img class="logo" src="images/logo.svg" alt="Miwa Yagi logo">
+      <div>
+        <h1>Miwa Yagi</h1>
+        <h2 class="job-title">Design Technologist</h2>
+      </div>
+    </a>
+  </header>  
+
+  <div class="page-wrapper" ng-controller="mainController">
+    <section class="content">
+      <nav role="navigation" class="main-nav">
+        <button class="menu" title="Navigation links"><i class="material-icons">list</i></button>
+        
+        <ul class="main-nav-list">
+          <li ng-repeat="link in nav"><a href="#{{ link }}" data-link="{{ link }}">{{ link }}</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <main role="main">
+<!-- ======================
+experience page 
+====================== -->     
+      <section class="page experience" id="experience">
+
+        <h2>Experience</h2>
+        
+          <div class="col">
+            <h3><i class="material-icons">work</i> Work</h3>
+
+            <div ng-repeat="item in works" class="container work">
+              <div class="section-title">
+                <p class="bubble end">{{ item.time.end }}</p>
+                <h4 class="title">{{ item.title }} - <span class="company">{{ item.company }}</span></h4>
+                <p class="bubble start">{{ item.time.start }}</p>
+              </div>
+              
+              <ul>
+                <li class="detail" ng-repeat="detail in item.detail">{{ detail }}</li>
+                <ul>
+                  <li class="more" ng-repeat="more in item.more">{{ more }}</li>
+                </ul>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col">
+
+            <h3><i class="material-icons">subject</i> Summery</h3>
+            <h4>front-end:</h4>
+            <p class="keyword-wrapper">
+              <span class="keyword" ng-repeat="item in frontend">{{ item }}</span>
+            </p>
+
+            <h4>design:</h4>
+            <p class="keyword-wrapper">
+              <span class="keyword" ng-repeat="item in design">{{ item }}</span>
+            </p>
+
+            <h4>interest:</h4>
+            <p class="keyword-wrapper">
+              <span class="keyword" ng-repeat="item in interest">{{ item }}</span>
+            </p>
+
+            <h3><i class="material-icons">school</i> Education</h3>
+            <div ng-repeat="item in education" class="container">
+              <h4>{{ item.course }} - {{ item.school }}</h4>
+              <p>{{ item.subjects }}</p>
+            </div>
+
+            <h3><i class="material-icons">translate</i> Language</h3>
+            <div class="container">
+              <p>Fluent in English and Japanese.</p>
+              <p lang="js">日本語と英語が流暢に話せます。</p>
+            </div>
+
+            <h3><i class="material-icons">description</i> Resume</h3>
+            <p><i class="material-icons">file_download</i> <a href="https://docs.google.com/document/d/1hJoinSRnQ7sWBUD5Qbd_R_fLVD4n8PU4Rt1LdtiF1wE/edit?usp=sharing" target="_blank">Download Resume </a></p>
+            
+          </div>        
+      </section>
+
+<!-- ======================
+portfolio page 
+====================== -->
+
+      <section class="page portfolio" id="portfolio">     
+        <h2>Portfolio</h2>
+        <div class="col">
+          <h3><i class="material-icons">code</i> Front End</h3>
+        
+          <div class="container">
+            <div class="section-title">
+              <h4>
+                <span class="bubble icon start"><i class="material-icons">&#xE30B;</i></span> github and codepen
+              </h4>
+            </div>
+
+            <p ng-repeat="info in portfolioLinks"><a href="https://{{ info.url }}" class="{{ info.site }} link" target="_blank"><img ng-src="images/{{ info.imgSrc }}" alt="{{ info.site }} icon" class="link-icon" title="A link to Miwa's {{ info.site }}"  target="_blank"><span>{{ info.site }} - {{ info.title }}</span></a></p>
+          </div>
+
+          <div class="container">
+            <div class="section-title">
+              <h4><span class="bubble icon"><i class="material-icons">&#xE051;</i></span> Creative Coding</h4>
+            </div>
+
+            <p>One of my favorite things is to code creatively. Here are some example of CSS and JS drawing and animation.</p>
+
+            <p><a href="http://codepen.io/peeweemiwie/pens/public/" class="codepen link" target="_blank"><img src="images/logo-codepen.svg" alt="codepen icon" class="link-icon" title="A link to Miwa's codepen."  target="_blank"><span>View more on Codepen</span></a></p>
+
+
+            <p ng-repeat="info in codepen" data-height="{{ info.height }}" data-theme-id="19622" data-slug-hash="{{ info.slugHash }}" data-default-tab="result" data-user="peeweemiwie" data-preview="{{ info.preview }}" class='codepen'>See the Pen <a href='http://codepen.io/peeweemiwie/pen/{{ info.slugHash }}/'>{{  codepen.title }}</a> by Miwa Yagi (<a href='http://codepen.io/peeweemiwie'>@peeweemiwie</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+          </div>   
+        </div> 
+
+        <div class="col">
+          <h3><i class="material-icons">create</i> Design</h3> 
+
+          <p>They are slighly outdated as I have been focusing on coding rather than designing lately but I think you can get an idea.</p>
+          <p>Hover over for more information.</p>
+            
+          <div class="image-container">
+            <div  ng-repeat="item in portfolio" style="background-image: url(images/{{ item.url }});" tabindex="0" aria-labelledby="aria-{{$index+1}}">
+              <p id="aria-{{$index+1}}">{{ item.text }}</p>
+            </div>
+          </div>
+        </div>   
+        </section>
+
+<!-- ======================
+bio page 
+====================== -->
+
+      <section class="page bio" id="bio">
+        <h2>Bio</h2>
+        <div class="col">
+          <h3><i class="material-icons">face</i> Who is Miwa?</h3>
+          <figure class="catbeard" >
+            <img ng-src="images/catbeard.jpg" alt="catbeard: Miwa and her cat Love" />
+          </figure>
+          <p ng-repeat='text in bio' ng-bind-html-unsafe="text.html">{{text}}</p>
+        </div>
+        
+        <div class="col">
+          <h3><i class="material-icons">photo_library</i> Gallery</h3>
+
+          <div class="photo-frame" ng-repeat="info in photoGallery">
+            <figure class="img-wrapper"><img ng-src="images/b-{{ info.imgSrc }}.jpg" alt="{{ info.alt }}"></figure>
+            <p>{{ info.title }}</p>
+          </div>
+        </div> 
+      </section>
+
+<!-- ======================
+contact page 
+====================== -->
+      <section class="page contact" id="contact">
+        <h2>Contact</h2>
+        <div class="wrapper">
+          <div class="col">
+          <h3><i class="material-icons">contact_mail</i> Contact</h3>
+          <p><a href="https://www.linkedin.com/in/miwayagi" class="linkedin link" target="_blank"><span>Please contact me via linkedIn.</span></a></p>
+          <p lang="js"><a href="https://www.linkedin.com/in/miwayagi" class="linkedin link" target="_blank"><span>linkedInからメッセージを送ってください。</span></a></p>
+          </div>
+          <div class="bubble-wrapper" aria-hidden="true"></div>
+        </div>
+        
+      </section>
+    </main>
+
+
+  </div>
+
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
   <!-- Modules -->
   <script src="js/app.js"></script>
   <!-- Controllers -->
-  <script src='js/controllers/nav-controller.js'></script>
+  <script src='js/controllers/mainController.js'></script>
   <!-- directive -->
-  <script src='js/directives/header.js'></script>
+  <script src='js/directives/sections.js'></script>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

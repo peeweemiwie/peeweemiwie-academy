@@ -144,16 +144,23 @@
 // ======================
 
 .catbeard {
-  border: 3px solid $red;
-  border-radius: 100%;
   float: left;
-  margin: 0 2rem 2rem 0;
+  height: 20rem;
+  width: 20rem;
+}
+
+.catbeard img {
+  border: 2px solid $red;
+  border-radius: 100%;
+
+  max-width: 100%;
 }
 
 .photo-frame {
   background-color: #fefefe;
   border: 1px solid $gray-ea;
   float: left;
+  height: 31.5rem;
   margin: 2%;
   padding: 1rem;
   position: relative;
@@ -161,7 +168,7 @@
 }
 
 .photo-frame p {
-    margin: .5rem 0;
+  margin: .5rem 0;
 }
 
 .photo-frame:after {
@@ -177,16 +184,14 @@
   width: 100%;
 }
 
-// .photo-frame img {
-//   max-width: 100%;
-// }
-
 .photo-frame .img-wrapper {
-  background-size: cover;
-  background-position: center center;
-  height: 0;
+  margin: 0;
   overflow: hidden;
-  padding-bottom: 96%;
+  width: 100%;
+}
+
+.photo-frame img {
+  max-width: 100%;
 }
 
 // ====================== 

@@ -1,11 +1,22 @@
-@media (min-width: 993px) { 
+$small: 768px;
+$large: 1024px;
+
+
+// @media (min-width: 993px) { 
+@media only screen and (min-device-width : $large){
 
   .experience .work:nth-of-type(2) .title{
     margin: 0;
   }
 }
 
-@media (min-width: 768px) and (max-width: 992px) { 
+// @media (min-width: 768px) and (max-width: 992px) { 
+
+@media only screen and (min-device-width : $small) and (max-device-width : $large){
+
+  .page {
+    // max-width: 100%;
+  }
 
   .page > h2 {
     font-size: 8rem;
@@ -19,12 +30,9 @@
   }
 
   .photo-frame {
+    height: 42rem;
     padding: 1rem;
   }
-  
-  // .contact > .col {
-  //   margin: 0;
-  // }
 
   .contact {
     height: auto;
@@ -40,35 +48,16 @@
     top: auto;
     transform: none;
     z-index: 5;
-}
-
-  .bubble-wrapper {
-    // width: 80%;
   }
-
-  // .main-nav-list {
-  //   flex-wrap: wrap;
-  // }
-
-  // .main-nav-list li {
-  //   text-align: center;
-  //   width: calc(50% - 4rem);
-  // }
 
 }
 
-@media (max-width: 767px) { 
-  header[role=banner] {
-    background-color: gray;
-    text-align: left;
-  }
+// @media (max-width: 767px) { 
+
+@media only screen and (max-device-width : $small){
 
   header[role=banner] .job-title {
     display: none;
-  }
-
-  button.menu {
-    left: 100vw;
   }
 
   button.menu .material-icons {
@@ -118,7 +107,7 @@
   }
 
   .experience .section-title .time.end {
-      float: left;
+    float: left;
   }
 
   .photo-frame {
@@ -142,7 +131,9 @@
 
   .main-nav-list a{
     align-items: center;
+    animation: none !important;
     background-color: $bg-color-1;
+    border-width: 0 0 1px 0;
     color: $white;
     display: inline-flex;
     font-family: 'Poppins', sans-serif;
@@ -150,8 +141,7 @@
     font-weight: 100;
     height: calc((100vh - 7rem) / 4 );
     justify-content: flex-start;
-    left: 0;
-    padding-left: 2rem;
+    padding-left: 10%;
     position: fixed;
     text-decoration: none;
     text-shadow: 0 0 0 transparent;
@@ -160,6 +150,7 @@
     z-index: 30; 
   }
 
+
   .main-nav-list a:focus, 
   .main-nav-list a:hover {
     color: #fff;
@@ -167,21 +158,25 @@
     text-shadow: none;
   }
 
-  .nav-hide .main-nav-list li:nth-of-type(odd) a {
-    left: -100vw;
+
+  [data-nav=show] .main-nav-list li:nth-of-type(even) a {
+    left: 0;
   }
 
-  .nav-hide .main-nav-list li:nth-of-type(even) a {
-    left: 100vw;
+  [data-nav=hide] .main-nav-list li:nth-of-type(odd) a {
+    left: -100%;
+  }
+
+  [data-nav=hide] .main-nav-list li:nth-of-type(even) a {
+    left: 100%;
   }
 
   @for $i from 1 through 4 {
     .main-nav-list li:nth-of-type(#{$i}) a {
-      border-bottom: 1px solid rgba($red, .9);
+      border-bottom:2px solid rgba($red, .9);
       border-left: 0;
       border-right: 0;
       border-top: 0;
-      left: 0;
       top: calc(((100vh - 7rem) / 4) * (#{$i} - 1) + 7rem);
     }
   }

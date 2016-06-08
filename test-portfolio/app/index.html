@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
   <head>
-    <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css">
+<!--     <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css"> -->
     <link href="css/main.css" rel="stylesheet">
     
     <script src="js/vendor/angular.min.js"></script>
@@ -28,6 +28,8 @@
           <plus-one></plus-one>
           
         </div>
+        <p>test</p>
+        <p ng-repeat="link in nav">{{link}}</p>
 
         <directive-test test='test'></directive-test>
         <test-link></test-link>
