@@ -2,7 +2,6 @@ $small: 768px;
 $large: 1024px;
 
 
-// @media (min-width: 993px) { 
 @media only screen and (min-device-width : $large){
 
   .experience .work:nth-of-type(2) .title{
@@ -10,7 +9,6 @@ $large: 1024px;
   }
 }
 
-// @media (min-width: 768px) and (max-width: 992px) { 
 
 @media only screen and (min-device-width : $small) and (max-device-width : $large){
 

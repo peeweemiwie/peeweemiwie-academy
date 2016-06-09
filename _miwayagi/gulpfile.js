@@ -65,10 +65,14 @@ gulp.task('default', function(){
   runSequence(['browserSync', 'watch']);
 });
 
+// gulp.task('build', function(){
+//   runSequence('clean:dist', 
+//     ['sass', 'useref', 'images', 'fonts']);
+// });
+
+
 gulp.task('build', function(){
-  runSequence('clean:dist', 
-    ['sass', 'useref', 'images', 'fonts']);
+  runSequence(
+    ['sass']);
 });
-
-
 
