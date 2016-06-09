@@ -1,0 +1,230 @@
+.page-wrapper {
+  margin: 0;
+  background-color: #fff;
+}
+
+.container {
+  margin-bottom: 5rem;
+}
+
+.container ul {
+  margin: 0;
+}
+
+.container p,
+.container li {
+  color: $text;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.keyword-wrapper {
+  margin: 0 0 3rem;
+}
+
+.keyword {
+  background: $gray-ea;
+  border-radius: 1rem;
+  color: $text;
+  display: inline-block;
+  font-family: arial, sans-serif;
+  padding: .5rem 1rem;
+  margin: .3rem;
+}
+
+.section-title {
+  background-color: gray;
+  border-radius: 20px;
+  color: $white;
+  margin-bottom: 1.5rem;
+  padding: .5rem 1rem;
+  text-align: center;
+}
+
+.section-title h4 {
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin: 0 1rem;
+}
+
+.section-title h4 a {
+  color: $white;
+  text-decoration: none;
+}
+
+.section-title .bubble,
+.section-title h4 {
+  display: inline-block;
+}
+
+.section-title .bubble {
+  background-color: $white;
+  border-radius: 12px;
+  color: $red;
+  margin: 0;
+  padding: .5rem;
+}
+
+.section-title .bubble.icon {
+  border-radius: 100%;
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.section-title .bubble.icon .material-icons {
+    margin-top: 2px;
+}
+
+
+.col {
+  display: inline-block;
+  float: left;
+  margin: 0px 3%;
+  width: 44%;
+}
+
+.col p {
+  margin: 1.5rem 2rem;
+}
+
+
+
+// ====================== 
+// experience
+// ======================
+
+
+
+// ====================== 
+// portfolio
+// ======================
+
+
+
+.link-icon {
+  width: 6rem;
+}
+
+.link span {
+  color: $text;
+  display: inline-block;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: color .5s;
+  position: relative;
+}
+
+.link:hover span {
+  color: $aqua;
+  transition: color .5s;
+}
+
+.link span:after {
+  border-bottom: 1px solid $aqua;
+  bottom: 0;
+  content: "";
+  display: inline-block; 
+  left: 0;
+  position: absolute; 
+  transition: border-bottom-color .5s, left .5s, width .5s;
+  width: 100%; 
+}
+
+.link:hover span:after {
+  border-bottom-color: $text;
+  left: 50%; 
+  transition: border-bottom-color .5s, left .5s, width .5s;
+  width: 0;
+}
+
+
+// ====================== 
+// bio
+// ======================
+
+.catbeard {
+  float: left;
+  height: 20rem;
+  width: 20rem;
+}
+
+.catbeard img {
+  border: 2px solid $red;
+  border-radius: 100%;
+
+  max-width: 100%;
+}
+
+.photo-frame {
+  background-color: #fefefe;
+  border: 1px solid $gray-ea;
+  float: left;
+  height: 31.5rem;
+  margin: 2%;
+  padding: 1rem;
+  position: relative;
+  width: 46%;
+}
+
+.photo-frame p {
+  margin: .5rem 0;
+}
+
+.photo-frame:after {
+  background: linear-gradient(to bottom, 
+    rgba(2, 2, 2, .3) 0%, 
+    rgba(255, 255, 255, 0) 100%);
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 10px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.photo-frame .img-wrapper {
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.photo-frame img {
+  max-width: 100%;
+}
+
+// ====================== 
+// contact
+// ======================
+
+.contact {
+  // position: relative;
+}
+
+.contact .wrapper {
+  position: relative;
+}
+
+.contact .wrapper .col {
+  background: rgba(255, 255, 255, .8);
+  border-radius: 20px;
+  left: 50%;
+  margin: 0;
+  padding: 4rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;    
+}
+
+.contact .wrapper .link {
+  background-image: url(../images/logo-linkedin.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 1.5rem;
+}
+
+
+

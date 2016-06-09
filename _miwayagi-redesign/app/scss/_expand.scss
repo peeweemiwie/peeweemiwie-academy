@@ -1,0 +1,50 @@
+// ====================== 
+// button.menu
+// ======================
+  button.menu {
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    left: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+  button.menu:hover,
+  button.menu:focus {
+    outline: none;
+  }
+
+  button.menu i {
+    color: $gray-80;
+    font-size: 5rem;
+    transform: rotate(0);
+    transition: color .3s, transform .3s;
+  }  
+
+  button.menu:hover i,
+  button.menu:focus i {
+    color: $red;
+    transform: rotate(90deg);
+    transition: color .3s, transform .3s;
+  }
+
+
+// ====================== 
+// main
+// ======================
+
+  .page {
+    margin: 0 auto 12rem;
+    max-width: 1270px;
+    overflow: hidden;  
+    padding-top: 7rem; 
+    width: 100%;
+  }
+  .page:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
