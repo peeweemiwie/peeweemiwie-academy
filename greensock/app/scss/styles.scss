@@ -1,0 +1,12 @@
+$black: #000;
+
+.border {
+  border: 1px solid gray;
+}
+.container {
+  @extend .border;
+}
+
+svg {
+  @extend .border;
+}

@@ -1,16 +1,15 @@
-var 
-  gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  browserSync = require('browser-sync').create(),
-  useref = require('gulp-useref'),
-  uglify = require('gulp-uglify'),
-  gulpIf = require('gulp-if'),
-  imagemin = require('gulp-imagemin'),
-  cache = require('gulp-cache'),
-  del = require('del'),
-  runSequence = require('run-sequence'),
-  prefix = require('gulp-autoprefixer'),
-  cleanCSS = require('gulp-clean-css')
+var gulp        = require('gulp'),
+    sass        = require('gulp-sass'),
+    browserSync = require('browser-sync').create(),
+    useref      = require('gulp-useref'),
+    uglify      = require('gulp-uglify'),
+    gulpIf      = require('gulp-if'),
+    imagemin    = require('gulp-imagemin'),
+    cache       = require('gulp-cache'),
+    del         = require('del'),
+    runSequence = require('run-sequence'),
+    prefix      = require('gulp-autoprefixer'),
+    cleanCSS    = require('gulp-clean-css')
 ;
 
 gulp.task('sass', function(){
